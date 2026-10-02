@@ -50,12 +50,12 @@ int main(){
     int width = terminalWidth();
 
     cout << string(width, '-') << '\n';
-    printCentered("System Info");
+    printCentered("\033[1;37mSystem Info\033[0m");
     cout << string(width, '-') << '\n';  
     printCentered("\033[93mOperating System: \033[0m" + os());
     printCentered("\033[93mKernel: \033[0m" + kernel());
     printCentered("\033[93mProcessor: \033[0m" + cpu());
-    printCentered("\033[93mRam: \033[0m");
+    printCentered("\033[93mRam: \033[0m" + ram());
     printCentered("\033[93mGPU: \033[0m");
     printCentered("\033[93mUser \033[0m");
     cout << string(width, '-') << '\n';
